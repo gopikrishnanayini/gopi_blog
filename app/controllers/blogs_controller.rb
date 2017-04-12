@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   
   def update
     @blog = Blog.find(params[:id])
-    @blog.update_attributes(params[:blog])
+    @blog.update_attributes(blog_params)
     redirect_to @blog, :notice=>"successfully updates"
   end
   
