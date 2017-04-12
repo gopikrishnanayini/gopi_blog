@@ -9,26 +9,21 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
-production:
-  database: myboostrap_production
-  adapter: postgresql
-  host: localhost
-  password:
+defaults: &default
+  adapter: sqlite3
+  encoding: utf8
 
 development:
-  database: myboostrap_development
-  adapter: postgresql
-  host: localhost
-  password:
+  <<: *default
+  database: db/development.sqlite3
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
-  database: myboostrap_test
-  adapter: postgresql
-  host: localhost
-  password:
+  <<: *default
+  database: db/development.sqlite3_test
+
+production:
+  <<: *default
+  database: db/development.sqlite3_production
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
