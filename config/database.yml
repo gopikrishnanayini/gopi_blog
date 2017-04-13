@@ -2,22 +2,20 @@ development:
   adapter: postgresql
   encoding: unicode
   database: gopi_development
-  pool: 5
-  username: postgres
-  password: postgres
+  username: 
+  password:
+  host: localhost
 
 test:
   adapter: postgresql
   encoding: unicode
   database: gopi_test
-  pool: 5
-  username: postgres
-  password: postgres
+  username: 
+  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: gopi_production
-  pool: 5
-  username: postgres
-  password: postgres
+  username:
+  password:
