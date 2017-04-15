@@ -24,3 +24,7 @@ default: &default
 development:
   <<: *default
   database: gopi_blog_development
+
+  production:
+  <<: *default
+  database: gopi_blog_development
