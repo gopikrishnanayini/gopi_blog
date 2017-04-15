@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: gopi_blog_development
-  username: karachi_bakery
-  password: <%= ENV['KARACHI_BAKERY_DATABASE_PASSWORD'] %>
+  username: 
+  password: 
